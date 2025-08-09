@@ -3,8 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TrueLineBetting — Sports Betting Dashboard</title>
-  <meta name="description" content="TrueLineBetting — bold, luxury sports betting dashboards for MLB, NFL, and NBA." />
+  <title>TrueLineBetting — MLB • NFL • NBA</title>
+  <meta name="description" content="TrueLineBetting — luxury-grade sports betting dashboards for MLB, NFL, and NBA." />
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <meta property="og:title" content="TrueLineBetting — Sports Betting Dashboard">
+  <meta property="og:description" content="Luxury-grade dashboards for MLB, NFL, and NBA.">
+  <meta property="og:image" content="https://truelinebetting-sun-run.vercel.app/assets/og-image.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
@@ -16,17 +23,35 @@
       <img src="assets/logo.svg" alt="TrueLineBetting logo" class="logo" />
       <span>TrueLineBetting</span>
     </a>
-    <nav class="nav">
+    <nav class="nav" aria-label="Primary">
       <a href="#dashboard" class="nav-link">Dashboard</a>
       <a href="#mlb" class="nav-link">MLB</a>
       <a href="#nfl" class="nav-link">NFL</a>
       <a href="#nba" class="nav-link">NBA</a>
+      <a href="#picks" class="nav-link">Picks</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <a href="#legal" class="nav-link">Legal</a>
     </nav>
+    <button id="mobileMenu" class="btn btn-ghost only-mobile" aria-label="Open menu">☰</button>
     <div class="actions">
       <button class="btn btn-ghost">Log in</button>
-      <button class="btn btn-primary">Join Free</button>
+      <button class="btn btn-primary">Join Premium</button>
     </div>
   </header>
+
+  <div id="mobileNav" class="mobile-nav hidden" role="dialog" aria-modal="true">
+    <nav class="mobile-links">
+      <a href="#dashboard" class="nav-link">Dashboard</a>
+      <a href="#mlb" class="nav-link">MLB</a>
+      <a href="#nfl" class="nav-link">NFL</a>
+      <a href="#nba" class="nav-link">NBA</a>
+      <a href="#picks" class="nav-link">Picks</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <a href="#legal" class="nav-link">Legal</a>
+    </nav>
+  </div>
 
   <main id="app" class="app-root" tabindex="-1" aria-live="polite"></main>
 
@@ -50,6 +75,9 @@
   </aside>
 
   <footer class="tlb-footer">
+    <div class="rg">
+      <strong>Responsible Gaming:</strong> 18+ (21+ where required). If you or someone you know has a gambling problem and wants help, call 1‑800‑GAMBLER.
+    </div>
     <p>© <span id="year"></span> TrueLineBetting. All rights reserved.</p>
   </footer>
 
