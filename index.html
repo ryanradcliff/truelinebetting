@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TrueLineBetting — Sports Betting Dashboard</title>
+  <meta name="description" content="TrueLineBetting — bold, luxury sports betting dashboards for MLB, NFL, and NBA." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="tlb-header">
+    <a href="#dashboard" class="brand">
+      <img src="assets/logo.svg" alt="TrueLineBetting logo" class="logo" />
+      <span>TrueLineBetting</span>
+    </a>
+    <nav class="nav">
+      <a href="#dashboard" class="nav-link">Dashboard</a>
+      <a href="#mlb" class="nav-link">MLB</a>
+      <a href="#nfl" class="nav-link">NFL</a>
+      <a href="#nba" class="nav-link">NBA</a>
+    </nav>
+    <div class="actions">
+      <button class="btn btn-ghost">Log in</button>
+      <button class="btn btn-primary">Join Free</button>
+    </div>
+  </header>
+
+  <main id="app" class="app-root" tabindex="-1" aria-live="polite"></main>
+
+  <aside id="betslip" class="betslip" aria-label="Bet Slip" aria-live="polite">
+    <div class="betslip-header">
+      <h3>Bet Slip</h3>
+      <button id="clearSlip" class="btn btn-ghost small">Clear</button>
+    </div>
+    <div id="betslipItems" class="betslip-items"></div>
+    <div class="betslip-footer">
+      <div class="stake">
+        <label for="stakeInput">Stake</label>
+        <input id="stakeInput" type="number" min="0" step="1" value="50" />
+      </div>
+      <div class="payout">
+        <div>Potential Payout</div>
+        <strong id="payoutValue">$0.00</strong>
+      </div>
+      <button id="placeBets" class="btn btn-primary full">Place (Demo)</button>
+    </div>
+  </aside>
+
+  <footer class="tlb-footer">
+    <p>© <span id="year"></span> TrueLineBetting. All rights reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
